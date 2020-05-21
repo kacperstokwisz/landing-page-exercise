@@ -24,9 +24,23 @@
         opacity: 0
         transition: all .4s .2s
 
+        +respond(tab-land)
+            padding-bottom: 1rem
+
+        +respond(phone)
+            width: 100%
+            height: 100vh
+            border-radius: 0
+
     &__left
         width: 33.33%
         display: table-cell
+
+        +respond(tab-land)
+            display: table-row
+            text-align: center
+            width: 100%
+            transform: translateY(-1rem)
 
     &__right
         width: 66.67%
@@ -34,9 +48,22 @@
         vertical-align: middle
         padding: 3rem 5rem
 
+        +respond(tab-land)
+            display: table-row
+            width: 100%
+            text-align: center
+            padding: 1rem 2rem
+
     &__img
         display: block
         width: 100%
+
+        +respond(tab-land)
+            display: inline-block
+            width: 30%
+
+        +respond(phone)
+            width: 40%
 
     &__text
         font-size: 1.4rem
@@ -51,6 +78,17 @@
         -ms-hyphens: auto
         -webkit-hyphens: auto
         hyphens: auto
+
+        +respond(tab-land)
+            padding: 0 2rem
+            text-align: left
+            margin-bottom: 2rem
+            column-gap: 3rem
+
+        +respond(phone)
+            column-count: 1
+            column-gap: 0rem
+
 
     &:target
         opacity: 1
